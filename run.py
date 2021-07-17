@@ -1,14 +1,14 @@
 # Users potential responses
-answer_a = ["A", "a"]
-answer_b = ["B", "b"]
-answer_c = ["C", "c"]
-yes = ["Yes", "YES", "yes", "y"]
-no = ["No", "NO", "no", "n"]
+yes = ["Yes", "YES", "yes", "y", "Y"]
+no = ["No", "NO", "no", "n", "N"]
+
+# Stores users name for later use
+name = input("Before we begin, what's your name?")
 
 
 # Start the game
 def start():
-    print("Would you like to start the game?")
+    print("Would you like to start the game " + name + "?")
     answer = input()
     if answer in yes:
         print("Success!")
