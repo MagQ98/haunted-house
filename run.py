@@ -5,9 +5,6 @@ answer_a = ["A", "a"]
 answer_b = ["B", "b"]
 answer_c = ["C", "c"]
 
-# Stores users name for later use
-
-
 # Empty muliline string
 # print("""
 # You’re probably better off. Most who play this game don’t make it out alive.
@@ -121,11 +118,11 @@ A) Check where the doors upstairs lead
 B) Look at the door under the stairs
 C) Check what’s in the room connected to the hall
     """)
-    answer = input()
+    answer = input("Please enter A, B or C: ")
     if answer in answer_a:
-        print("Upstairs")
+        upstairs()
     elif answer in answer_b:
-        print("Basement")
+        basement()
     elif answer in answer_c:
         print("Kitchen")
     else:
@@ -133,8 +130,81 @@ C) Check what’s in the room connected to the hall
         inside_house()
 
 
-# Call functions to start game
+def upstairs():
+    print("You go upstairs. There are 3 rooms. What room do you go into?")
+    print("""
+A) Left
+B) The door in the middle
+C) Right
+    """)
+    answer = input("Please enter A, B or C: ")
+    if answer in answer_a:
+        print("Left")
+    elif answer in answer_b:
+        print("The middle")
+    elif answer in answer_c:
+        print("Right")
+    else:
+        print("Please answer A, B or C: ")
+        upstairs()
+
+
+def basement():
+    print("Its a basement. Are you sure you want to go down?")
+    answer = input("Please enter Yes or No: ")
+    if answer in yes:
+        basement_down()
+    elif answer in no:
+        print("""
+You decide to go up a floor instead
+and head towards the large staircase.
+    """)
+        upstairs()
+
+    else:
+        print("Please answer A or B")
+        basement()
+
+
+def basement_down():
+    print("You climb down the stairs. What should you do?")
+    print("""
+A) Look for a light
+B) Keep going in dark
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        basement_end()
+    elif answer in answer_b:
+        print("You die")
+        try_again()
+    else:
+        print("Please answer Yes or No")
+        basement_down()
+
+
+def basement_end():
+    print("You find a light and see a hole. What do you want to do")
+    print("""
+A) Look down the hole
+B) Leave the basement
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        print("You fall in hole and die")
+        try_again()
+    elif answer in answer_b:
+        print("Monster grabs your leg and you die")
+        try_again()
+    else:
+        print("Please answer Yes or No")
+        basement_end()
+
+
+# Stores users name for later use
 name = input("Before we begin, what's your name? ")
+
+# Call functions to start game
 
 
 def main():
@@ -144,4 +214,4 @@ def main():
 # Function to test specific parts of game
 
 # main()
-house_help()
+inside_house()
