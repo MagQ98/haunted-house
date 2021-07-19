@@ -139,11 +139,11 @@ C) Right
     """)
     answer = input("Please enter A, B or C: ")
     if answer in answer_a:
-        print("Left")
+        bathroom()
     elif answer in answer_b:
-        print("The middle")
+        middleroom()
     elif answer in answer_c:
-        print("Right")
+        bedroom()
     else:
         print("Please answer A, B or C: ")
         upstairs()
@@ -162,7 +162,7 @@ and head towards the large staircase.
         upstairs()
 
     else:
-        print("Please answer A or B")
+        print("Please answer Yes or No")
         basement()
 
 
@@ -179,7 +179,7 @@ B) Keep going in dark
         print("You die")
         try_again()
     else:
-        print("Please answer Yes or No")
+        print("Please answer A or B")
         basement_down()
 
 
@@ -197,8 +197,162 @@ B) Leave the basement
         print("Monster grabs your leg and you die")
         try_again()
     else:
-        print("Please answer Yes or No")
+        print("Please answer A or B")
         basement_end()
+
+
+def bathroom():
+    print("""
+It's a bathroom. The tub is full and your name is written on the mirror
+What would you like to do?
+    """)
+    print("""
+A) Wipe away your name
+B) Pull the plug
+C) Check the room next to you instead
+    """)
+    answer = input("Please enter A, B or C: ")
+    if answer in answer_a:
+        print("Doppelganger in mirror swaps places")
+        try_again()
+    elif answer in answer_b:
+        print("Creature in tub drowns you")
+        try_again()
+    elif answer in answer_c:
+        print("You leave the bathroom and try the room nextdoor.")
+        middleroom()
+    else:
+        print("Please answer A, B or C")
+        bathroom()
+
+
+def bedroom():
+    print("""
+It's a bedroom. There's a vanity in the corner and a scratching noise
+coming from under the bed.
+    """)
+    print("""
+A) Check the vanity
+B) Look under the bed
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        print("Doppelganger in mirror swaps places")
+        try_again()
+    elif answer in answer_b:
+        print("Something drags you under the bed")
+        try_again()
+    else:
+        print("Please answer A or B")
+        bedroom()
+
+
+def middleroom():
+    print("""
+Old dusty room with a bunch of furniture and a ladder to the attic
+What do you want to do?
+    """)
+    print("""
+A) Climb up the ladder
+B) Investigate the furniture
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        attic()
+        try_again()
+    elif answer in answer_b:
+        hat_stand()
+    else:
+        print("Please answer A or B")
+        middleroom()
+
+
+def hat_stand():
+    print("""
+You see a hat stand covered in a cloth moving,
+but you don't feel a breeze. Investigate?
+    """)
+    print("""
+A) No I'll just check out the attic
+B) Yes I'll remove the fabric
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        attic()
+    elif answer in answer_b:
+        print("Man hiding under cloth grabs you")
+        try_again()
+    else:
+        print("Please answer A or B")
+        hat_stand()
+
+
+def attic():
+    print("""
+Old dusty attic with a large window balcony.
+Light is shining through except onto a covered painting
+How would you like to proceed?
+    """)
+    print("""
+A) Open the window and go onto the balcony
+B) Look at the painting
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        balcony()
+    elif answer in answer_b:
+        print("Painting sucks you into it")
+        try_again()
+    else:
+        print("Please answer A or B")
+        attic()
+
+
+def balcony():
+    print("""
+You step out onto the balcony and see the side of the house
+It has an overgrown but climbable lattice
+Do you want to try climb down?
+    """)
+    print("""
+A) Yes, it looks like it'll be worth the risk
+B) No, I really want to look at the painting I saw before
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        lattice()
+    elif answer in answer_b:
+        print("Painting sucks you into it. You die")
+        try_again()
+    else:
+        print("Please answer A or B")
+        balcony()
+
+
+def lattice():
+    print("""
+You make your way down the lattice
+but you swear you can feel the ivy wrapping around your wrists
+Do you think you should speed up?
+    """)
+    print("""
+A) Yes, the sooner I'm out of here the better
+B) No I'll take my name, I must be imagining things
+    """)
+    answer = input("Please enter A or B: ")
+    if answer in answer_a:
+        print("You quickly but carefully climb down")
+        congrats()
+    elif answer in answer_b:
+        print("Vines wrap around you. You die")
+        try_again()
+    else:
+        print("Please answer A or B")
+        lattice()
+
+
+def congrats():
+    print("Congratualtions, YOU WIN!")
 
 
 # Stores users name for later use
