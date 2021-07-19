@@ -52,7 +52,7 @@ def try_again():
         print("Please answer Yes or No")
         try_again()
 
-# Car breaks down and user can go into house
+# Car breaks down. Can try go to house or not
 
 
 def house_help():
@@ -97,19 +97,23 @@ Maybe you would have had a little more luck at the house?
         print("Please answer A or B")
         house_help()
 
+#  Can go into house or not
+
 
 def go_inside():
-    print("House is empty. Do you want to go inside?")
+    print("House is empty. Gravestones in garden. Do you want to go inside?")
     answer = input("Please enter Yes or No: ")
     if answer in yes:
         inside_house()
     elif answer in no:
-        print("You die")
+        print("Zombies get you.You die")
         try_again()
     else:
         print("Please answer Yes or No")
         go_inside()
 
+
+# Pick where to go inside house
 
 def inside_house():
     print("You make it inside the house. Where do you go now?")
@@ -130,6 +134,8 @@ C) Check what’s in the room connected to the hall
         inside_house()
 
 
+# Pick what room to go into upstairs
+
 def upstairs():
     print("You go upstairs. There are 3 rooms. What room do you go into?")
     print("""
@@ -148,6 +154,8 @@ C) Right
         print("Please answer A, B or C: ")
         upstairs()
 
+# Go down into basement or upstairs
+
 
 def basement():
     print("Its a basement. Are you sure you want to go down?")
@@ -164,6 +172,8 @@ and head towards the large staircase.
     else:
         print("Please answer Yes or No")
         basement()
+
+# What to do at end of basement stairs
 
 
 def basement_down():
@@ -182,6 +192,8 @@ B) Keep going in dark
         print("Please answer A or B")
         basement_down()
 
+# Basement room endings
+
 
 def basement_end():
     print("You find a light and see a hole. What do you want to do")
@@ -199,6 +211,8 @@ B) Leave the basement
     else:
         print("Please answer A or B")
         basement_end()
+
+# Pick option in bathroom or go to middleroom
 
 
 def bathroom():
@@ -226,6 +240,8 @@ C) Check the room next to you instead
         bathroom()
 
 
+# Pick options in bedroom
+
 def bedroom():
     print("""
 It's a bedroom. There's a vanity in the corner and a scratching noise
@@ -237,14 +253,16 @@ B) Look under the bed
     """)
     answer = input("Please enter A or B: ")
     if answer in answer_a:
-        print("Doppelganger in mirror swaps places")
+        print("Doppelganger in mirror swaps places. You die")
         try_again()
     elif answer in answer_b:
-        print("Something drags you under the bed")
+        print("Something drags you under the bed. You die")
         try_again()
     else:
         print("Please answer A or B")
         bedroom()
+
+# Investigate middleroom or go to attic
 
 
 def middleroom():
@@ -267,6 +285,8 @@ B) Investigate the furniture
         middleroom()
 
 
+# Check the hatstand or go to attic
+
 def hat_stand():
     print("""
 You see a hat stand covered in a cloth moving,
@@ -286,6 +306,8 @@ B) Yes I'll remove the fabric
         print("Please answer A or B")
         hat_stand()
 
+
+# In attic check balcony or painting
 
 def attic():
     print("""
@@ -308,6 +330,8 @@ B) Look at the painting
         attic()
 
 
+# Balcony, climb down or go back and check painting
+
 def balcony():
     print("""
 You step out onto the balcony and see the side of the house
@@ -328,6 +352,8 @@ B) No, I really want to look at the painting I saw before
         print("Please answer A or B")
         balcony()
 
+
+# Climb down lattice, pick speed
 
 def lattice():
     print("""
@@ -351,6 +377,8 @@ B) No I'll take my name, I must be imagining things
         lattice()
 
 
+# End game congratulations
+
 def congrats():
     print("Congratualtions, YOU WIN!")
 
@@ -367,5 +395,5 @@ def main():
 
 # Function to test specific parts of game
 
-# main()
-inside_house()
+main()
+# inside_house()
