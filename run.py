@@ -6,7 +6,7 @@ answer_b = ["B", "b"]
 answer_c = ["C", "c"]
 
 # Stores users name for later use
-name = input("Before we begin, what's your name?")
+
 
 # Empty muliline string
 # print("""
@@ -29,8 +29,7 @@ name = input("Before we begin, what's your name?")
 # Start the game
 def start():
     print("Would you like to start the game " + name + "?")
-    print("Yes or No?")
-    answer = input()
+    answer = input("Please enter Yes or No: ")
     if answer in yes:
         house_help()
     elif answer in no:
@@ -42,17 +41,16 @@ Maybe next time..?
         print("Please answer Yes or No")
         start()
 
-# Try again
+# Try the game again
 
 
 def try_again():
     print("Would you like to try again?")
-    print("Yes or No?")
-    answer = input()
+    answer = input("Please enter Yes or No: ")
     if answer in yes:
         start()
-    if answer in no:
-        try_again()
+    elif answer in no:
+        exit()
     else:
         print("Please answer Yes or No")
         try_again()
@@ -85,9 +83,9 @@ An even bigger Iron rusted gate blocks your pathway in.
 A) Yeah, I don’t really feel safe out here in the dark
 B) No that looks a bit ominous, I’d rather take my chances out in the woods
     """)
-    answer = input()
+    answer = input("Please enter A or B: ")
     if answer in answer_a:
-        print("Yes")
+        go_inside()
     elif answer in answer_b:
         print("""
 You decide the house is a little too much for you
@@ -103,5 +101,47 @@ Maybe you would have had a little more luck at the house?
         house_help()
 
 
-# Call function to start game
-start()
+def go_inside():
+    print("House is empty. Do you want to go inside?")
+    answer = input("Please enter Yes or No: ")
+    if answer in yes:
+        inside_house()
+    elif answer in no:
+        print("You die")
+        try_again()
+    else:
+        print("Please answer Yes or No")
+        go_inside()
+
+
+def inside_house():
+    print("You make it inside the house. Where do you go now?")
+    print("""
+A) Check where the doors upstairs lead
+B) Look at the door under the stairs
+C) Check what’s in the room connected to the hall
+    """)
+    answer = input()
+    if answer in answer_a:
+        print("Upstairs")
+    elif answer in answer_b:
+        print("Basement")
+    elif answer in answer_c:
+        print("Kitchen")
+    else:
+        print("Please answer A, B or C")
+        inside_house()
+
+
+# Call functions to start game
+name = input("Before we begin, what's your name? ")
+
+
+def main():
+    start()
+
+
+# Function to test specific parts of game
+
+# main()
+house_help()
