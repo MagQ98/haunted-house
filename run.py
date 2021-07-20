@@ -26,7 +26,7 @@ answer_c = ["C", "c"]
 # Start the game
 def start():
     print("Would you like to start the game " + name + "?")
-    answer = input("Please enter Yes or No: ")
+    answer = input("Please enter Yes or No: \n")
     if answer in yes:
         house_help()
     elif answer in no:
@@ -43,7 +43,7 @@ Maybe next time..?
 
 def try_again():
     print("Would you like to try again?")
-    answer = input("Please enter Yes or No: ")
+    answer = input("Please enter Yes or No: \n")
     if answer in yes:
         start()
     elif answer in no:
@@ -80,7 +80,7 @@ An even bigger Iron rusted gate blocks your pathway in.
 A) Yeah, I don’t really feel safe out here in the dark
 B) No that looks a bit ominous, I’d rather take my chances out in the woods
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         go_inside()
     elif answer in answer_b:
@@ -102,7 +102,7 @@ Maybe you would have had a little more luck at the house?
 
 def go_inside():
     print("House is empty. Gravestones in garden. Do you want to go inside?")
-    answer = input("Please enter Yes or No: ")
+    answer = input("Please enter Yes or No: \n")
     if answer in yes:
         inside_house()
     elif answer in no:
@@ -122,7 +122,7 @@ A) Check where the doors upstairs lead
 B) Look at the door under the stairs
 C) Check what’s in the room connected to the hall
     """)
-    answer = input("Please enter A, B or C: ")
+    answer = input("Please enter A, B or C: \n")
     if answer in answer_a:
         upstairs()
     elif answer in answer_b:
@@ -143,7 +143,7 @@ A) Left
 B) The door in the middle
 C) Right
     """)
-    answer = input("Please enter A, B or C: ")
+    answer = input("Please enter A, B or C: \n")
     if answer in answer_a:
         bathroom()
     elif answer in answer_b:
@@ -159,7 +159,7 @@ C) Right
 
 def basement():
     print("Its a basement. Are you sure you want to go down?")
-    answer = input("Please enter Yes or No: ")
+    answer = input("Please enter Yes or No: \n")
     if answer in yes:
         basement_down()
     elif answer in no:
@@ -182,7 +182,7 @@ def basement_down():
 A) Look for a light
 B) Keep going in dark
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         basement_end()
     elif answer in answer_b:
@@ -201,7 +201,7 @@ def basement_end():
 A) Look down the hole
 B) Leave the basement
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         print("You fall in hole and die")
         try_again()
@@ -225,7 +225,7 @@ A) Wipe away your name
 B) Pull the plug
 C) Check the room next to you instead
     """)
-    answer = input("Please enter A, B or C: ")
+    answer = input("Please enter A, B or C: \n")
     if answer in answer_a:
         print("Doppelganger in mirror swaps places")
         try_again()
@@ -251,7 +251,7 @@ coming from under the bed.
 A) Check the vanity
 B) Look under the bed
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         print("Doppelganger in mirror swaps places. You die")
         try_again()
@@ -274,7 +274,7 @@ What do you want to do?
 A) Climb up the ladder
 B) Investigate the furniture
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         attic()
         try_again()
@@ -296,7 +296,7 @@ but you don't feel a breeze. Investigate?
 A) No I'll just check out the attic
 B) Yes I'll remove the fabric
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         attic()
     elif answer in answer_b:
@@ -319,7 +319,7 @@ How would you like to proceed?
 A) Open the window and go onto the balcony
 B) Look at the painting
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         balcony()
     elif answer in answer_b:
@@ -342,7 +342,7 @@ Do you want to try climb down?
 A) Yes, it looks like it'll be worth the risk
 B) No, I really want to look at the painting I saw before
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         lattice()
     elif answer in answer_b:
@@ -365,7 +365,7 @@ Do you think you should speed up?
 A) Yes, the sooner I'm out of here the better
 B) No I'll take my name, I must be imagining things
     """)
-    answer = input("Please enter A or B: ")
+    answer = input("Please enter A or B: \n")
     if answer in answer_a:
         print("You quickly but carefully climb down")
         congrats()
@@ -384,7 +384,7 @@ def congrats():
 
 
 # Stores users name for later use
-name = input("Before we begin, what's your name? ")
+name = input("Before we begin, what's your name? \n")
 
 # Call functions to start game
 
