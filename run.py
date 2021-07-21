@@ -5,23 +5,6 @@ answer_a = ["A", "a"]
 answer_b = ["B", "b"]
 answer_c = ["C", "c"]
 
-# Empty muliline string
-# print("""
-# You’re probably better off. Most who play this game don’t make it out alive.
-# Maybe next time..?
-#            """)
-
-# Empty game function
-# def game():
-#     print()
-#     answer= input()
-#     if answer in yes:
-#         print()
-#     elif answer in no:
-#         print()
-#     else:
-#         print()
-
 
 # Start the game
 def start():
@@ -61,7 +44,7 @@ def house_help():
 You’ve spent your entire afternoon traveling halfway around the country,
 only to find out you’ve been going the wrong direction the whole time!
 (It’s not your fault your GPS doesn’t have spell check).
-To save time on your journey home you cut off the main road through thick woods
+To save time on your journey home you cut off road through thick woods
 down an old windy road you’re pretty sure no one has been on in years.
 You can barely see the rising moon, over the tops of the thick forest trees.
 You’re tired and you just want to get home to relax as soon as possible,
@@ -76,14 +59,10 @@ The whole area is enclosed with a large stone wall.
 An even bigger Iron rusted gate blocks your pathway in.
     """)
     print("Do you want to see if you can get any help at the House?")
-    print("""
-A) Yeah, I don’t really feel safe out here in the dark
-B) No that looks a bit ominous, I’d rather take my chances out in the woods
-    """)
-    answer = input("Please enter A or B: \n")
-    if answer in answer_a:
+    answer = input("Please enter Yes or No: \n")
+    if answer in yes:
         go_inside()
-    elif answer in answer_b:
+    elif answer in no:
         print("""
 You decide the house is a little too much for you
 You would rather try to walk home in the opposite direction.
@@ -94,53 +73,107 @@ Maybe you would have had a little more luck at the house?
         """)
         try_again()
     else:
-        print("Please answer A or B")
+        print("Please answer Yes or No")
         house_help()
 
 #  Can go into house or not
 
 
 def go_inside():
-    print("House is empty. Gravestones in garden. Do you want to go inside?")
+    print("""
+You make your way up the hill towards the house,
+forcefully push open the big gate and make your way in.
+On the walk-up, you have a quick look around your environment
+and are horrified to discover those statues you saw were actually gravestones.
+As you get closer to the building itself you can see just how dilapidated
+and sinister this house is and you also see all the windows are boarded up.
+You reach the porch and as you climb the old creaky stairs
+you can swear you feel a pair of eyes bearing into the back of your head.
+You make it to the door and bang the ancient door knocker,
+but hear no response.
+The feeling of something behind you is growing stronger
+and with each passing second and you can feel the panic set in
+    """)
+    print("Should you see if the door is open and invite yourself in?")
     answer = input("Please enter Yes or No: \n")
     if answer in yes:
         inside_house()
     elif answer in no:
-        print("Zombies get you.You die")
+        print("""
+You conclude that you don’t want to break into a random person's house,
+regardless of everything in your body screaming at you to take shelter.
+You turn around and decide to make your way back to your car
+but before you can even step off the porch you find yourself surrounded
+by a group of dark figures.
+You go to ask them a question but the words don’t get to your lips
+before they grab you.
+You get a closer look at your assailants
+and are disgusted to see they look like zombies,
+straight out of a horror movie.
+You struggle as much as you can as they pull you into a fresh open grave
+but their combined strength mixed with the foul smell of dirt is overpowering
+and you find yourself getting lightheaded.
+They continue to drag you further and further into the dirt
+and as you look up at the sky for the last time,
+All you can think about is how maybe you should've been a little bit more rude.
+        """)
         try_again()
     else:
         print("Please answer Yes or No")
         go_inside()
 
 
-# Pick where to go inside house
+# Go to basement or upstairs
 
 def inside_house():
-    print("You make it inside the house. Where do you go now?")
+    print("""
+You silently pray as you reach for the rusty door handle and try to turn it.
+It works, the door is unlocked!
+You quickly jump through the open door and slam it shut behind you.
+You breathe a sigh of relief and lean against the door
+but quickly hear what sounds like a latch clicking in the lock.
+You panic slightly and try to turn the door handle,
+only to realise you’re now locked in.
+You step back and take a look around the dark, cobweb-ridden house
+and are greeted by a sprawling staircase as the centerpiece of the hallway.
+The room is adorned with large, mostly decayed portraits
+that make you feel like they're watching your every move.
+Every window is bordered up and the room gives you a feeling of uneasiness,
+that you would quickly like to leave behind.
+As you look around the hallway you spot a few doors
+and can see a few more in the upstairs landing.
+    """)
+    print("What would you like to do?")
     print("""
 A) Check where the doors upstairs lead
 B) Look at the door under the stairs
-C) Check what’s in the room connected to the hall
     """)
     answer = input("Please enter A, B or C: \n")
     if answer in answer_a:
         upstairs()
     elif answer in answer_b:
         basement()
-    elif answer in answer_c:
-        print("Kitchen")
     else:
-        print("Please answer A, B or C")
+        print("Please answer A or B")
         inside_house()
 
 
 # Pick what room to go into upstairs
 
 def upstairs():
-    print("You go upstairs. There are 3 rooms. What room do you go into?")
+    print("""
+You slowly make your way up the old creaking stairs,
+afraid with each step that you’ll fall through the steps.
+After what seems like forever you finally reach the top of the stairs.
+Exhausted and pretending not to be out of breath,
+you look around and see three doors right in front of you.
+The middle door seems to have a gentle light seeping out underneath it
+while the other two look quite dark.
+    """)
+    print("Which door would you like to go through?")
     print("""
 A) Left
-B) The door in the middle
+B) Middle
 C) Right
     """)
     answer = input("Please enter A, B or C: \n")
@@ -158,7 +191,13 @@ C) Right
 
 
 def basement():
-    print("Its a basement. Are you sure you want to go down?")
+    print("""
+There’s a door barely visible under the stairs that catches your attention.
+You make your way over and open the door to discover that
+it contains a set of stairs that lead down to what you think is the basement.
+Staring down into the dark abyss you feel an overwhelming sense of dread.
+    """)
+    print("Are you sure you want to go down?")
     answer = input("Please enter Yes or No: \n")
     if answer in yes:
         basement_down()
@@ -177,16 +216,39 @@ and head towards the large staircase.
 
 
 def basement_down():
-    print("You climb down the stairs. What should you do?")
+    print("""
+You anxiously make your way down the basement stairs,
+the darkness swallowing you more and more with each step.
+You reach the bottom step and can feel a slight pressure on your lungs
+like the whole room is covered with dampness and mold.
+You gently shuffle forward gripping yourself tightly to the wall,
+your anxiety rising slightly as you realise you can’t see in front of you.
+The only thing occupying your senses is the slight sound of water
+dripping somewhere in the room and a quiet almost gurgling sound.
+You swear you can almost feel the presence of something large down here.
+You need to figure out how you’re going to move around in this darkness.
+    """)
     print("""
 A) Look for a light
-B) Keep going in dark
+B) Keep going in the dark
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         basement_end()
     elif answer in answer_b:
-        print("You die")
+        print("""
+You decide to try your chances in the dark.
+You let go from the wall and courageously take a few big strides
+to what you hope is the center of the room.
+But you don't manage to make it very far,
+after a few steps the ground seems to disappear
+right from under your feet and you fall for what seems an eternity.
+When you finally crash land, the thickness of the air makes you lightheaded
+and you’re sure you’re far too hurt to move.
+Unfortunately by the sounds of whatever creature is wriggling down there,
+you discovered the source of those gurgling noises
+and you’re sure your pain won't last long.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -196,17 +258,67 @@ B) Keep going in dark
 
 
 def basement_end():
-    print("You find a light and see a hole. What do you want to do")
+    print("""
+You make the choice to look for a source of light.
+Thankfully, you don’t have to look around too hard.
+You slightly step away from the wall,
+waving your arms around in the air and manage to get caught up in a string.
+Trying to untie yourself results in a switching sound and before you know it,
+the room is enveloped in a dim red glow
+from a lone flickering lightbulb hanging from a wire.
+Looking around your location proves to be a mistake however
+as the room makes you feel very unsettled.
+The room looks unfinished.
+The walls are a decrepit, dark slimy stone
+and the floor seems almost sticky with moisture.
+There is what looks like a big open sewer grate,
+right in the middle of the room,
+that you swear you can hear movement in.
+Everything about this room makes you regret coming down here
+    """)
+    print("What would you like to do?")
     print("""
 A) Look down the hole
 B) Leave the basement
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
-        print("You fall in hole and die")
+        print("""
+Your curiosity gets the better of you as you creep closer
+and closer to the edge of the hole.
+Each footstep you make towards the unknown creature seems to make it angrier,
+it trashes its body around in the sewer grate as it gets louder and louder.
+By the time you reach the edge,
+it seems to be almost throwing itself from side to side,
+shaking the entire room as it does so.
+Ignoring everything your body is doing to tell you to run,
+you gingerly lean your head over the edge of the hole.
+You barely catch a glimpse of a Kraken like monster before
+what feels like a massive tentacle wraps itself around your head.
+It grips you tightly, beginning to wrap itself around your neck and body.
+As it begins to lift you off the ground and down into its sharp,
+beak like mouth you begin to lose consciousness.
+The last thought in mind is the saying about how curiosity killed the cat.
+        """)
+        print("I guess now you can say the same for " + name)
         try_again()
     elif answer in answer_b:
-        print("Monster grabs your leg and you die")
+        print("""
+The atmosphere of the room proves too much for you
+and you choose to retreat upstairs.
+You turn around and begin to walk towards the staircase,
+nearly skidding across the wet floor.
+As you begin your ascent, you hear a low moaning noise behind you.
+Your heart beat races as you begin to race up the stairs.
+You near the top, the light from the doorway enters your vision
+but just as quick as you see it, it’s gone.
+You feel something warm and moist grab around your leg
+as you are forcefully yanked back down the stairs.
+The last thing you feel is your head banging off the cold stone steps
+as your body is dragged down into the dark.
+The final steps knocks you unconscious, ensuring your faith.
+You never really were a fan of basements anyway.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -217,7 +329,19 @@ B) Leave the basement
 
 def bathroom():
     print("""
-It's a bathroom. The tub is full and your name is written on the mirror
+You push open the leftmost door and it leads you into a dark, cold bathroom.
+An ornate bathtub sits in the middle of the room and on further inspection,
+it seems to be full with something.
+You cautiously look around the bathroom
+and are surprised when you see something move in front of you,
+but sigh with relief when you realise
+it was just your foggy reflection in the mirror.
+Looking at the mirror, it seems strange to you
+that it’s fogged up like that when it’s so cold in here.
+That's when you notice there’s something written in the corner of the mirror.
+    """)
+    print(name + "...")
+    print("""
 What would you like to do?
     """)
     print("""
@@ -227,13 +351,43 @@ C) Check the room next to you instead
     """)
     answer = input("Please enter A, B or C: \n")
     if answer in answer_a:
-        print("Doppelganger in mirror swaps places")
+        print("""
+Seeing your name written on the mirror like that makes you feel very uneasy.
+You decide to try to wipe it off.
+You step closer to the mirror and use your sleeve to wipe away the letters.
+As you do so, you spot something that makes your blood run cold.
+Your reflection never moved when you did.
+You look up, only to make eye contact with your doppelgänger in the mirror.
+It is smirking wickedly at you.
+It reaches through, grabs you by the shoulders
+and lifts you through the mirror,
+swapping places with you as it does so.
+All you can do now is watch from the otherside of the glass
+as it wipes itself down, smiles at you one last time
+and then leaves you behind forever.
+You watch yourself walk away as a final thought enters your mind,
+What happens if that thing finds its way to your home...
+        """)
         try_again()
     elif answer in answer_b:
-        print("Creature in tub drowns you")
+        print("""
+You walk over to the bathtub, curiosity getting the better of you.
+As you reach the edge you swear you can see slight movement
+under the surface of the water.
+You lean in closer to the tub
+and dip your fingers into the freezing, thick liquid.
+You reach further into the bath
+and can just feel the chain of the plug at your fingertips.
+As you stretch even further, to get a grip of the plug,
+you feel something grab your arm.
+An unknown force pulls you into the murky tub,
+as you trash and fight for your life it tightens its grip on you.
+The last thing you feel is your body being dragged further down into the water.
+Never to be seen again.
+        """)
         try_again()
     elif answer in answer_c:
-        print("You leave the bathroom and try the room nextdoor.")
+        print("You leave the bathroom to try the room nextdoor.")
         middleroom()
     else:
         print("Please answer A, B or C")
@@ -244,19 +398,55 @@ C) Check the room next to you instead
 
 def bedroom():
     print("""
-It's a bedroom. There's a vanity in the corner and a scratching noise
-coming from under the bed.
+You decide to open the door on the far right.
+It feels heavy and makes an awful creaking noise as it’s pushed inwards.
+You enter the room and examine your surroundings.
+In front of you is a large and very regal four poster bed.
+To your side is an elegant vanity with a large circular mirror,
+covered in scattered pieces of jewellery.
+You walk further into the room and the closer you get to the bed,
+the more you can hear a faint scratching noise.
     """)
+    print("What do you think you should do?")
     print("""
 A) Check the vanity
 B) Look under the bed
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
-        print("Doppelganger in mirror swaps places. You die")
+        print("""
+You turn around to face the vanity and spot all the jewelry thrown across it.
+Gold, Diamonds, and Pearls adorn the dresser.
+As you get closer something shimmering in the light catches your eye.
+A ruby glistening pendant lays in the center of the vanity
+and once you lay your eyes on it, you can't take them away.
+You feel almost like you're under some spell by this necklace,
+and you feel an overwhelming need to put it on.
+You reach for it, tie the clasps behind your neck
+and can feel yourself losing control immediately.
+As you fade out of consciousness for the last time,
+you catch a final glimpse of your blood-red eyes in the mirror,
+your mind disappears entirely.
+Whatever took over your body now leaves the room.
+Red never really was your color anyway.
+        """)
         try_again()
     elif answer in answer_b:
-        print("Something drags you under the bed. You die")
+        print("""
+You continue even further into the room and approach the bed.
+The scratching noises start to become slightly louder and more frequent.
+You slow down and begin to inch yourself closer to the bed frame.
+You are about to crouch down for a better look,
+when all the noises suddenly stop.
+Panicking at the abrupt silence, you take a step back. But it’s too late.
+A disheveled hand suddenly reaches out and grabs you by your ankle.
+It pulls you hard, forcing you to crash onto the ground landing on your back.
+The hand violently yanks on you and your body slides across the floor,
+underneath the bed.
+In your final moments,
+you realise your childhood fear of something lurking under your bed,
+might have actually been founded.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -267,9 +457,15 @@ B) Look under the bed
 
 def middleroom():
     print("""
-Old dusty room with a bunch of furniture and a ladder to the attic
-What do you want to do?
+You push open the door to the middle room and step inside.
+The room is full of old dusty furniture, most of it covered in sheets.
+There's a massive gap in the ceiling
+with old wooden stairs leading up through it,
+you assume it leads up to the attic.
+The light you saw under the door is pouring in through the gap,
+making all the floating dust particles in the air glisten.
     """)
+    print("How would you like to proceed?")
     print("""
 A) Climb up the ladder
 B) Investigate the furniture
@@ -289,18 +485,38 @@ B) Investigate the furniture
 
 def hat_stand():
     print("""
-You see a hat stand covered in a cloth moving,
-but you don't feel a breeze. Investigate?
+You cautiously continue walking in to the room,
+making your way around all the unidentifiable covered furniture.
+As you go deeper into the room
+the furniture starts to become more densely packed,
+forcing you to squeeze your body through any gaps.
+The dust begins to slowly fill your lungs, causing you to cough.
+Your chest gets tight and when you cough to relieve it,
+You spot a movement in the corner of your eye.
+You turn to see what seems like a coatstand covered in more cloth,
+but it’s shifting and looks almost like it’s breathing.
+You don't feel a breeze coming in anywhere.
     """)
+    print("What would you like to do?")
     print("""
-A) No I'll just check out the attic
-B) Yes I'll remove the fabric
+A) Go back and investigate the attic
+B) Remove the cloth from the coatstand
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         attic()
     elif answer in answer_b:
-        print("Man hiding under cloth grabs you")
+        print("""
+Your curiosity gets the better of you as you make your way to the coatstand
+You begin to hold your breath in anticipation as you inch closer.
+You reach your hand out to grab onto the cloth.
+But just as you are about to pull it,
+a large pair of arms shoot out and wrap themselves around you.
+You can feel yourself being lifted up off the ground,
+and as your assailant pulls you close and begins to violently squeeze your body
+you realise it wasn’t a stand under the cloth at all, It was a person.
+And your doom.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -311,19 +527,46 @@ B) Yes I'll remove the fabric
 
 def attic():
     print("""
-Old dusty attic with a large window balcony.
-Light is shining through except onto a covered painting
-How would you like to proceed?
+You climb up the steep wooden stairs and find yourself in the attic.
+There’s a large window that lights up the room,
+with a glass door that leads out onto a balcony.
+You can see the sunlight start to shine through as the sun begins to rise.
+How long have you been in this house?
+As you are thinking about where the time went,
+you notice something partially covered with a dirty paint splatter sheet.
+It looks like the outline of a large painting on an easel
     """)
+    print("What do you want to do?")
     print("""
 A) Open the window and go onto the balcony
-B) Look at the painting
+B) Peek at the painting
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         balcony()
     elif answer in answer_b:
-        print("Painting sucks you into it")
+        print("""
+Something about the unknown piece of art piques your interest.
+You walk across the room towards it,
+with each step your heart beats faster with anticipation.
+Standing in front of it now,
+the painting is intimidatingly bigger than you thought it was.
+The covered canvas towers above you as you gently reach out and pull the cover.
+You stand still, observing the dark crimson brush strokes
+and the overall unsettling nature of the painting
+That’s when you spot two figures hidden in the center of the painting.
+One of them looks like you.
+The other a hulking shadow figure standing directly behind you,
+hand on your shoulder.
+The sight of it makes you feel anxious and you are about to turn around,
+when you feel a cold icy grip on your shoulder.
+You try to spin around but are suddenly frozen in place, unable to move.
+A frosty breeze encases your entire body, making you shiver
+The grip on your shoulder tightens and becomes incredibly painful,
+forcing you to start blacking out.
+The last thing you see before the pain and cold take over,
+is your final breath, visible in the icy cold air.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -363,7 +606,7 @@ Do you think you should speed up?
     """)
     print("""
 A) Yes, the sooner I'm out of here the better
-B) No I'll take my name, I must be imagining things
+B) No I'll take my time, I must be imagining things
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
@@ -396,4 +639,4 @@ def main():
 # Function to test specific parts of game
 
 main()
-# inside_house()
+# bathroom()
