@@ -577,19 +577,50 @@ is your final breath, visible in the icy cold air.
 
 def balcony():
     print("""
-You step out onto the balcony and see the side of the house
-It has an overgrown but climbable lattice
-Do you want to try climb down?
+You walk across the room and push open the large glass doors.
+Stepping out onto the stone balcony, the wind hits your face
+as you take a deep breath of fresh air and look around.
+The thick forest surrounding the house doesn't seem as intimidating now,
+as it did last night in the dark.
+Leaning over the edge of the balcony,
+you can see an old lattice attached to the side of the house.
+It’s overgrown with vines and ivy and doesn’t look very stable.
+The plants intertwine around the lattice and
+almost seem to dance as they twist in the wind.
+You reach out and grip the lattice, giving it a slight shake.
+It doesn't seem very sturdy but it could be your only way out.
     """)
+    print("What do you think you should do?")
     print("""
-A) Yes, it looks like it'll be worth the risk
-B) No, I really want to look at the painting I saw before
+A)Try to climb down the lattice
+B)Go back and look at the painting, it's calling to me
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         lattice()
     elif answer in answer_b:
-        print("Painting sucks you into it. You die")
+        print("""
+Something about the unknown piece of art piques your interest.
+You walk across the room towards it,
+with each step your heart beats faster with anticipation.
+Standing in front of it now,
+the painting is intimidatingly bigger than you thought it was.
+The covered canvas towers above you as you gently reach out and pull the cover.
+You stand still, observing the dark crimson brush strokes
+and the overall unsettling nature of the painting
+That’s when you spot two figures hidden in the center of the painting.
+One of them looks like you.
+The other a hulking shadow figure standing directly behind you,
+hand on your shoulder.
+The sight of it makes you feel anxious and you are about to turn around,
+when you feel a cold icy grip on your shoulder.
+You try to spin around but are suddenly frozen in place, unable to move.
+A frosty breeze encases your entire body, making you shiver
+The grip on your shoulder tightens and becomes incredibly painful,
+forcing you to start blacking out.
+The last thing you see before the pain and cold take over,
+is your final breath, visible in the icy cold air.
+        """)
         try_again()
     else:
         print("Please answer A or B")
@@ -600,20 +631,50 @@ B) No, I really want to look at the painting I saw before
 
 def lattice():
     print("""
-You make your way down the lattice
-but you swear you can feel the ivy wrapping around your wrists
-Do you think you should speed up?
+You decide to try your luck climbing down.
+You carefully throw your leg over the edge of the balcony
+and grip on tightly to the lattice.
+Cautiously, you begin to make your way down,
+trying your best not to look straight at the ground.
+Your slight fear of heights pumps the adrenaline through your body,
+making you pick up speed on your descent.
+After a short period your arms are just starting to hurt
+when you feel a slight tickle on your wrist.
+You pull back your hand to see a thin piece of ivy,
+wrapping itself around your wrist.
+Then you notice that all the plants around you seem to have started squirming.
+It almost looks like some of them are moving towards your direction.
     """)
+    print("Should you take your time or be quick?")
     print("""
-A) Yes, the sooner I'm out of here the better
-B) No I'll take my time, I must be imagining things
+A) Move quickly, the sooner I leave here the better
+B) Move slowly, I must be imagining things
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         print("You quickly but carefully climb down")
         congrats()
     elif answer in answer_b:
-        print("Vines wrap around you. You die")
+        print("""
+You decide you must be imagining things,
+you’ve had a long strange night and are just exhausted.
+You slow down your climbing
+and try to ignore the plants moving underneath you.
+As you climb down further, you can feel the shrub getting thicker
+and you find it more difficult to place your hands in between the tiny gaps.
+You pull your right hand out to change positions when suddenly,
+a vine reaches out around your wrist and pulls you into the lattice,
+firmly holding you in place.
+Before you can react more and more vines shoot out,
+each wrapping themselves around different parts of your body
+and pulling you in tighter.
+You realise while you’ve been climbing down,
+these plants have been slowly and gently snaking themselves around your limbs
+and you can no longer move.
+The vines wrap you up and pull you into them,
+absorbing you into a sea of branches and ivy.
+Never to be heard from again.
+        """)
         try_again()
     else:
         print("Please answer A or B")
