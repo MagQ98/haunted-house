@@ -1,3 +1,29 @@
+# Code from https://www.101computing.net/python-typing-text-effect/
+import time
+import sys
+import os
+
+
+def typingPrint(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+
+
+def typingInput(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    value = input()
+    return value
+
+
+def clearScreen():
+    os.system("clear")
+
+
 # Users potential responses
 yes = ["Yes", "YES", "yes", "y", "Y"]
 no = ["No", "NO", "no", "n", "N"]
@@ -8,17 +34,17 @@ answer_c = ["C", "c"]
 
 # Start the game
 def start():
-    print("Would you like to start the game " + name + "?")
-    answer = input("Please enter Yes or No: \n")
+    typingPrint("Would you like to start the game " + name + "?")
+    answer = typingInput("Please enter Yes or No: \n")
     if answer in yes:
         house_help()
     elif answer in no:
-        print("""
+        typingPrint("""
 You’re probably better off. Most who play this game don’t make it out alive.
 Maybe next time..?
             """)
     else:
-        print("Please answer Yes or No")
+        typingPrint("Please answer Yes or No")
         start()
 
 # Try the game again
@@ -655,12 +681,12 @@ B) Move slowly, I must be imagining things
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
         print("""
-You carefully but quickly make your way down the lattice
+You carefully but quickly make your way down the lattice.
 You can scarcely feel the vines weak attempts to wrap itself around you
 as you keep ripping your hand away from the wall to move quicker.
 As you are getting closer to the bottom,
 you can feel the plants attempts to constrict you becoming more violent.
-More vines begin to shoot out trying to encase you, narrowly missing your face.
+More vines begin to shoot out trying to encase you, narrowly missing your face
 You are clambering down the lattice at an accelerated pace,
 When you see another vine going straight for your neck,
 you try to dodge it and in doing so lose your footing.
@@ -673,15 +699,8 @@ you must have broken your ankle in the fall.
 Exhausted, aching and slightly traumatised
 you start to make your way back to where you think your car is,
 limping the whole way.
-The sun is shining brightly above you and as you spot your car in the distance,
-you suddenly remember something.
-You had bought some antifreeze for your car awhile back
-and left it in the boot for safe keeping.
-So safe, that you forgot where it was when you needed it the most.
-You rush to your car to see if your memory is right this time and it is.
-The coolant was in the boot the whole time.
-You bitterly grab the antifreeze,
-pour the liquid into your car's radiator and then turn the ignition.
+After what seems like hours you finally make it to your car.
+You jump into the front seat and pray as you turn the key in the ignition.
 Thankfully it works.
 You pull away from the house glancing back at it one more time,
 to see numerous eyes staring at you through cracks in the windows boards.
