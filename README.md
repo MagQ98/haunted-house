@@ -1,45 +1,68 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Features
+======
 
-Welcome MagQ98,
+### Run program button
+<ul>
+<li></li>
+</ul>
+<img src="assets/images/" alt="" style="max-width:100%;">
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+### Terminal area
+<ul>
+<li></li>
+</ul>
+<img src="assets/images/" alt="" style="max-width:100%;">
 
-## Gitpod Reminders
+### Program structre
+<ul>
+<li></li>
+</ul>
+<img src="assets/images/" alt="" style="max-width:100%;">
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+Testing
+======
 
-A blue button should appear to click: *Make Public*,
+## Validator Testing
 
-Another blue button should appear to click: *Open Browser*.
+### PEP8
+No errors were returned when passing through the PEP8 code validator
+<img src="assets/images/pep8.JPG" alt="PEP8" style="max-width:100%;">
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Fixed Bugs or Issues
+<ul>
+<li></li>
+</ul>
+<img src="assets/images/try_again.JPG" alt="Try again" style="max-width:100%;">
 
-A blue button should appear to click: *Make Public*,
+Deployment
+======
 
-Another blue button should appear to click: *Open Browser*.
+<p>The site was deployed to Heroku. The steps I used to deploy are as follows:</p>
+<p>Before deploying I went though my code and added new line characters to the end of any text inside the input method. Without this extra line, the text for the input request will not show up in the terminal</p>
+<p>Next in order for my project to run on Heroku, I needed to add dependencies for Heroku to install. To create my list of dependencies, I used the following command in the terminal 'Pip3 freeze > requirements.txt'.</p>
+<p>I then had to create a new Heroku account. Once my account was created, I clicked on the button to create a new app. I picked a name for my app, selected my region and pressed the create app button</p>
+<p>On the next page I went to the Settings tab. I did not have any sensitive information to keep hidden in my project so I did not need to add anything to the Config Vars section</p>
+<p>My next step was to go to the Buildpacks section, this installs further dependencies that I needed, outside of the ones in the requirements.txt file. I pressed the Add buildpacks button and selected Heroku, then saved the changes. I then selected nodejs and saved the changes again.</p>
+<p>Next I navigated to the Deployment section to choose my deployment method. I connected my Heroku account to Github, searched for my repository name and then clicked connect to link up my Heroku app to my Github repository code.</p>
+<p>I then scrolled down and chose to Automatically deploy my project. From the source section drop-down menu, I selected the Main Branch and then I clicked the Enable Automatic Deploys button</p>
+<p>I then had to wait for my app while it was being built and when it was done I saw a “App was  successfully deployed” message and a button to show my deployed link</p>
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The live link can be found here - https://haunted-house0.herokuapp.com/
 
-## Updates Since The Instructional Video
+Credits
+======
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Content
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<p>When planning my project I visited a number of different sites to gain inspiration</p>
+<p>https://www.youtube.com/watch?v=DEcFCn2ubSg&ab_channel=TechWithTim</p>
+<p>https://www.youtube.com/watch?v=SH5-xJp1mY0&ab_channel=hundredvisionsguy</p>
+<p>https://www.youtube.com/watch?v=IRg4G-iUD_I&ab_channel=SamRosenfeld</p>
+<p>https://thecodingpie.com/post/make-your-own-text-based-adventure-game-in-python3</p>
+<p>https://www.derekshidler.com/how-to-create-a-text-based-adventure-and-quiz-game-in-python/</p>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Acknowledgements
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+My mentor and tutor for continuous helpful feedback
