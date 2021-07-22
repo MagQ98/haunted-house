@@ -31,7 +31,8 @@ No errors were returned when passing through the PEP8 code validator
 
 ### Fixed Bugs or Issues
 <ul>
-<li></li>
+<li>When a user made a choice in game that resulted in their death, they were met with an option to try again. If the user answered yes they were brought to the beginning of the game where they were asked again if they would like to play</li>
+<li>This interaction ended up being very repetitive so the function was changed to start the story at a different stage when the user chose to try again</li>
 </ul>
 <img src="assets/images/try_again.JPG" alt="Try again" style="max-width:100%;">
 
@@ -46,7 +47,7 @@ Deployment
 <p>My next step was to go to the Buildpacks section, this installs further dependencies that I needed, outside of the ones in the requirements.txt file. I pressed the Add buildpacks button and selected Heroku, then saved the changes. I then selected nodejs and saved the changes again.</p>
 <p>Next I navigated to the Deployment section to choose my deployment method. I connected my Heroku account to Github, searched for my repository name and then clicked connect to link up my Heroku app to my Github repository code.</p>
 <p>I then scrolled down and chose to Automatically deploy my project. From the source section drop-down menu, I selected the Main Branch and then I clicked the Enable Automatic Deploys button</p>
-<p>I then had to wait for my app while it was being built and when it was done I saw a “App was  successfully deployed” message and a button to show my deployed link</p>
+<p>I then had to wait for my app while it was being built and when it was done I saw an “App was  successfully deployed” message and a button to show my deployed link</p>
 
 The live link can be found here - https://haunted-house0.herokuapp.com/
 
