@@ -28,7 +28,7 @@ def try_again():
     print("Would you like to try again?")
     answer = input("Please enter Yes or No: \n")
     if answer in yes:
-        start()
+        house_help()
     elif answer in no:
         exit()
     else:
@@ -53,9 +53,11 @@ You come to a sudden stop as your car lets out one final groan of exhaustion
 with a cloud of smoke coming from the engine.
 You quickly get out of the car and open the hood.
 You let out a sigh of defeat when you see the state the engine is in.
+You’re pretty sure it’s after overheating,
+but you don’t think you have any water or coolant to add to it.
 Suddenly you realise you stopped at the foot of a large house on a hill.
-It seems to be surrounded by waves of little statues.
-The whole area is enclosed with a large stone wall.
+It seems to be surrounded by waves of little stone statues.
+The whole area is enclosed with a large brick wall.
 An even bigger Iron rusted gate blocks your pathway in.
     """)
     print("Do you want to see if you can get any help at the House?")
@@ -652,7 +654,40 @@ B) Move slowly, I must be imagining things
     """)
     answer = input("Please enter A or B: \n")
     if answer in answer_a:
-        print("You quickly but carefully climb down")
+        print("""
+You carefully but quickly make your way down the lattice
+You can scarcely feel the vines weak attempts to wrap itself around you
+as you keep ripping your hand away from the wall to move quicker.
+As you are getting closer to the bottom,
+you can feel the plants attempts to constrict you becoming more violent.
+More vines begin to shoot out trying to encase you, narrowly missing your face.
+You are clambering down the lattice at an accelerated pace,
+When you see another vine going straight for your neck,
+you try to dodge it and in doing so lose your footing.
+You fall for a few seconds and hit the ground with a hard crash.
+Winded and in a lot of pain,
+you lie on the ground for a few moments trying to regain your composure.
+After a minutes you try to stand up only to find
+you can barely put pressure on your left foot,
+you must have broken your ankle in the fall.
+Exhausted, aching and slightly traumatised
+you start to make your way back to where you think your car is,
+limping the whole way.
+The sun is shining brightly above you and as you spot your car in the distance,
+you suddenly remember something.
+You had bought some antifreeze for your car awhile back
+and left it in the boot for safe keeping.
+So safe, that you forgot where it was when you needed it the most.
+You rush to your car to see if your memory is right this time and it is.
+The coolant was in the boot the whole time.
+You bitterly grab the antifreeze,
+pour the liquid into your car's radiator and then turn the ignition.
+Thankfully it works.
+You pull away from the house glancing back at it one more time,
+to see numerous eyes staring at you through cracks in the windows boards.
+You don't know what they had planned for you,
+but you’re grateful you never had to find out.
+        """)
         congrats()
     elif answer in answer_b:
         print("""
@@ -684,7 +719,20 @@ Never to be heard from again.
 # End game congratulations
 
 def congrats():
-    print("Congratualtions, YOU WIN!")
+    print("""
+Congratulations! YOU WIN!
+You made it out of the house alive and in one piece.
+Well done.
+Would you like to test your luck and try again?
+    """)
+    answer = input("Please enter Yes or No: \n")
+    if answer in yes:
+        house_help()
+    elif answer in no:
+        exit()
+    else:
+        print("Please answer Yes or No")
+        try_again()
 
 
 # Stores users name for later use
@@ -700,4 +748,4 @@ def main():
 # Function to test specific parts of game
 
 main()
-# bathroom()
+# lattice()
