@@ -1,29 +1,3 @@
-# Code from https://www.101computing.net/python-typing-text-effect/
-import time
-import sys
-import os
-
-
-def typingPrint(text):
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-
-
-def typingInput(text):
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.05)
-    value = input()
-    return value
-
-
-def clearScreen():
-    os.system("clear")
-
-
 # Users potential responses
 yes = ["Yes", "YES", "yes", "y", "Y"]
 no = ["No", "NO", "no", "n", "N"]
@@ -34,17 +8,17 @@ answer_c = ["C", "c"]
 
 # Start the game
 def start():
-    typingPrint("Would you like to start the game " + name + "? \n")
-    answer = typingInput("Please enter Yes or No: \n")
+    print("Would you like to start the game " + name + "? \n")
+    answer = input("Please enter Yes or No: \n")
     if answer in yes:
         house_help()
     elif answer in no:
-        typingPrint("""
+        print("""
 You’re probably better off. Most who play this game don’t make it out alive.
 Maybe next time..?
             """)
     else:
-        typingPrint("Please answer Yes or No")
+        print("Please answer Yes or No")
         start()
 
 # Try the game again
@@ -755,7 +729,7 @@ Would you like to test your luck and try again?
 
 
 # Stores users name for later use
-name = typingInput("Before we begin, what's your name? \n")
+name = input("Before we begin, what's your name? \n")
 
 # Call functions to start game
 
@@ -766,5 +740,5 @@ def main():
 
 # Function to test specific parts of game
 
-# main()
-start()
+main()
+# start()
