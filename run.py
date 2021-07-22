@@ -34,7 +34,7 @@ answer_c = ["C", "c"]
 
 # Start the game
 def start():
-    typingPrint("Would you like to start the game " + name + "?")
+    typingPrint("Would you like to start the game " + name + "? \n")
     answer = typingInput("Please enter Yes or No: \n")
     if answer in yes:
         house_help()
@@ -755,7 +755,7 @@ Would you like to test your luck and try again?
 
 
 # Stores users name for later use
-name = input("Before we begin, what's your name? \n")
+name = typingInput("Before we begin, what's your name? \n")
 
 # Call functions to start game
 
@@ -766,5 +766,5 @@ def main():
 
 # Function to test specific parts of game
 
-main()
-# lattice()
+# main()
+start()
