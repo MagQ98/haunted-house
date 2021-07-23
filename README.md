@@ -2,23 +2,55 @@ Features
 ======
 
 ### Play Game button
+
 <ul>
-<li></li>
+<li>Lets the user start the game</li>
+<li>Allows the user to restart the game at any stage they like</li>
 </ul>
-<img src="assets/images/" alt="" style="max-width:100%;">
+<img src="assets/images/play_button.JPG" alt="Play game button" style="max-width:100%;">
 
 ### Terminal area
+
 <ul>
-<li></li>
+<li>Displays text for the user to read and interact with</li>
+<li>Gives a space for users to input their data</li>
 </ul>
-<img src="assets/images/" alt="" style="max-width:100%;">
+<img src="assets/images/terminal.JPG" alt="Terminal area" style="max-width:100%;">
 
 ### Program structre
-<ul>
-<li></li>
-</ul>
-<img src="assets/images/" alt="" style="max-width:100%;">
 
+<ul>
+<li>To plan my project I used a flowchart to help keep track all of the branching narratives of the story and to keep them in one place</li>
+</ul>
+<img src="assets/images/flowchart.jpg" alt="Flowchart" style="max-width:100%;">
+
+### Future Features
+
+<ul>
+<li>Plans to add more story text and to create more choices and options</li>
+<li>Plans to refactor code to make it more adaptable for other potential stories</li>
+<li>Plans to make the terminal size bigger to display larger chunks of text</li>
+</ul>
+
+Technologies Used
+======
+
+### Languages
+
+<ul>
+<li>Python</li>
+</ul>
+
+### Frameworks & Tools
+
+<ul>
+<li>Git</li>
+<li>GitHub</li>
+<li>Gitpod</li>
+<li>Google Documents</li>
+<li>Heroku</li>
+<li>https://app.diagrams.net/</li>
+</ul>
 
 Testing
 ======
@@ -50,13 +82,14 @@ Deployment
 <p>I then had to wait for my app while it was being built and when it was done I saw an “App was  successfully deployed” message and a button to show my deployed link</p>
 
 The live link can be found here - https://haunted-house0.herokuapp.com/
+The repository can be found here - https://github.com/MagQ98/haunted-house
 
 Credits
 ======
 
 ### Content
 
-<p>When planning my project I visited a number of different sites to gain inspiration</p>
+<p>When planning my project I visited a number of different sites to gain inspiration:</p>
 <p>https://www.youtube.com/watch?v=DEcFCn2ubSg&ab_channel=TechWithTim</p>
 <p>https://www.youtube.com/watch?v=SH5-xJp1mY0&ab_channel=hundredvisionsguy</p>
 <p>https://www.youtube.com/watch?v=IRg4G-iUD_I&ab_channel=SamRosenfeld</p>

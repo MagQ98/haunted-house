@@ -664,44 +664,36 @@ More vines begin to shoot out trying to encase you, narrowly missing your face
 You are clambering down the lattice at an accelerated pace,
 When you see another vine going straight for your neck,
 you try to dodge it and in doing so lose your footing.
-You fall for a few seconds and hit the ground with a hard crash.
-Winded and in a lot of pain,
+You fall and hit the ground with a hard crash. Winded and in a lot of pain,
 you lie on the ground for a few moments trying to regain your composure.
-After a minutes you try to stand up only to find
-you can barely put pressure on your left foot,
-you must have broken your ankle in the fall.
 Exhausted, aching and slightly traumatised
 you start to make your way back to where you think your car is,
-limping the whole way.
+limping in pain the whole way.
 After what seems like hours you finally make it to your car.
 You jump into the front seat and pray as you turn the key in the ignition.
 Thankfully it works.
 You pull away from the house glancing back at it one more time,
 to see numerous eyes staring at you through cracks in the windows boards.
 You don't know what they had planned for you,
-but you’re grateful you never had to find out.
+but you’re glad you never had to find out.
         """)
         congrats()
     elif answer in answer_b:
         print("""
 You decide you must be imagining things,
 you’ve had a long strange night and are just exhausted.
-You slow down your climbing
-and try to ignore the plants moving underneath you.
-As you climb down further, you can feel the shrub getting thicker
-and you find it more difficult to place your hands in between the tiny gaps.
+You slow down your climbing and try ignore the plants moving underneath you.
+The further you climb down, the thicker the shrub seems to be getting.
 You pull your right hand out to change positions when suddenly,
 a vine reaches out around your wrist and pulls you into the lattice,
 firmly holding you in place.
 Before you can react more and more vines shoot out,
-each wrapping themselves around different parts of your body
-and pulling you in tighter.
-You realise while you’ve been climbing down,
+each wrapping themselves around your body and pulling you in tighter.
+You realise that while you’ve been climbing down,
 these plants have been slowly and gently snaking themselves around your limbs
 and you can no longer move.
 The vines wrap you up and pull you into them,
-absorbing you into a sea of branches and ivy.
-Never to be heard from again.
+absorbing you into a sea of branches and ivy. Never to be heard from again.
         """)
         try_again()
     else:
