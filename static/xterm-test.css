@@ -180,14 +180,14 @@
 button {
     width: 200px;
     height: 40px;
-    background-color: #E84610;
+    background-color: #008080;
     border: 1px solid grey;
     color: white;
     text-transform: uppercase;
     margin: 10px;
     border-radius: 8px;
     position: fixed;
-    bottom: 94%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

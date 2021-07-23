@@ -1,7 +1,7 @@
 Features
 ======
 
-### Run program button
+### Play Game button
 <ul>
 <li></li>
 </ul>
