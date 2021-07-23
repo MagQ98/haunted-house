@@ -57,11 +57,21 @@ Testing
 
 ## Validator Testing
 
-### PEP8
+#### PEP8
 No errors were returned when passing through the PEP8 code validator
 <img src="assets/images/pep8.JPG" alt="PEP8" style="max-width:100%;">
 
+## Manual Testing
+
+I have manually tested this project by doing the following:
+<ul>
+<li>Passed the code through a a PEP8 linter and confirmed there were no problems</li>
+<li>Given invalid inputs such as numbers when strings are expected, out of bounds inputs or the same input twice</li>
+<li>Tested in my local terminal and the Code Institute Heroku terminal</li>
+</ul>
+
 ### Fixed Bugs or Issues
+
 <ul>
 <li>When a user made a choice in game that resulted in their death, they were met with an option to try again. If the user answered yes they were brought to the beginning of the game where they were asked again if they would like to play</li>
 <li>This interaction ended up being very repetitive so the function was changed to start the story at a different stage when the user chose to try again</li>
