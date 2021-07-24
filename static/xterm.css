@@ -30,12 +30,12 @@
  *   has been extended to include xterm CSI codes, among
  *   other features.
  */
-​
 
 /**
-  *  Default styles for xterm.js
-  */
-​ .xterm {
+ *  Default styles for xterm.js
+ */
+
+.xterm {
     font-feature-settings: "liga"0;
     position: relative;
     user-select: none;
@@ -52,9 +52,9 @@
     position: absolute;
     top: 0;
     /**
-      * The z-index of the helpers must be higher than the canvases in order for
-      * IMEs to appear on top.
-      */
+     * The z-index of the helpers must be higher than the canvases in order for
+     * IMEs to appear on top.
+     */
     z-index: 5;
 }
 
