@@ -30,22 +30,17 @@
  *   has been extended to include xterm CSI codes, among
  *   other features.
  */
+​
 
 /**
- *  Default styles for xterm.js
- */
-
-.xterm {
+  *  Default styles for xterm.js
+  */
+​ .xterm {
     font-feature-settings: "liga"0;
+    position: relative;
     user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 
 .xterm.focus,
@@ -57,9 +52,9 @@
     position: absolute;
     top: 0;
     /**
-     * The z-index of the helpers must be higher than the canvases in order for
-     * IMEs to appear on top.
-     */
+      * The z-index of the helpers must be higher than the canvases in order for
+      * IMEs to appear on top.
+      */
     z-index: 5;
 }
 
@@ -180,14 +175,10 @@
 button {
     width: 200px;
     height: 40px;
-    background-color: #008080;
+    background-color: #E84610;
     border: 1px solid grey;
     color: white;
     text-transform: uppercase;
     margin: 10px;
     border-radius: 8px;
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

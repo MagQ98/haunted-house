@@ -730,7 +730,4 @@ def main():
     start()
 
 
-# Function to test specific parts of game
-
 main()
-# start()

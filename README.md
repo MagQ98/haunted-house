@@ -21,6 +21,7 @@ Features
 
 <ul>
 <li>To plan my project I used a flowchart to help keep track all of the branching narratives of the story and to keep them in one place</li>
+<li>I also wrote the name of the functions beside the corresponding room to help follow along when coding esier</li>
 </ul>
 <img src="assets/images/flowchart.jpg" alt="Flowchart" style="max-width:100%;">
 
@@ -91,8 +92,8 @@ Deployment
 <p>I then scrolled down and chose to Automatically deploy my project. From the source section drop-down menu, I selected the Main Branch and then I clicked the Enable Automatic Deploys button</p>
 <p>I then had to wait for my app while it was being built and when it was done I saw an “App was  successfully deployed” message and a button to show my deployed link</p>
 
-The live link can be found here - https://haunted-house0.herokuapp.com/
-The repository can be found here - https://github.com/MagQ98/haunted-house
+<p>The live link can be found here - https://haunted-house0.herokuapp.com/</p>
+<p>The repository can be found here - https://github.com/MagQ98/haunted-house</p>
 
 Credits
 ======
