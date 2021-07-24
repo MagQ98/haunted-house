@@ -9,7 +9,7 @@ How to play
 ======
 
 <p>Haunted House is based on choose your own adventure books. Specifically the Goosebumps Reader Beware, you choose the scare books by R.L.Stine</p>
-<p>The user is initally greeted by a start promt where they enter their name and then consent to playing</p>
+<p>The user is initally greeted by a start prompt where they enter their name and then consent to playing</p>
 <p>From there the user is presented with an original story about a Haunted house where they are given the choice to follow whatever narrative they desire</p>
 <p>The user is in control of how the story plays out and in order to successfully escape the haunted house the user must make all the right decisions</p>
 <p>When making a choice the user will either be asked to enter Yes or No to some questions and A, B or C to other questions</p>
@@ -92,8 +92,8 @@ I have manually tested this project by doing the following:
 ### Fixed Bugs or Issues
 
 <ul>
-<li>When a user made a choice in game that resulted in their death, they were met with an option to try again. If the user answered yes they were brought to the beginning of the game where they were asked again if they would like to play</li>
-<li>This interaction ended up being very repetitive so the function was changed to start the story at a different stage when the user chose to try again</li>
+<li>When a user made a choice in game that resulted in their death, they were met with an option to try again. If the user answered yes they were brought to the beginning of the game where they were asked again if they would like to play. This interaction ended up being very repetitive so the function was changed to start the story at a different stage when the user chose to try again</li>
+<li>While creating my project I had an idea to make the text appear on the screen letter by letter, as if it was being typed out in real time. I did this by finding a library on this site here https://www.101computing.net/python-typing-text-effect/. Once downloaded I changed all the print and input functions to typingPrint and typingInput functions. This had the desired effect and worked in the Github terminal. Unfortunately it didn't work in the Heroku terminal and instead delayed the text so it had to be taken out</li>
 </ul>
 <img src="assets/images/try_again.JPG" alt="Try again" style="max-width:100%;">
 
