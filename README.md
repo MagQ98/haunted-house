@@ -3,6 +3,7 @@ Haunted House
 
 <p>Haunted House is a Python terminal game which runs in the Code institute mock terminal on Heroku</p>
 <p>Users can make their own choices in this choose your own adventure story by reading and selecting various options that they will be presented with</p>
+[The live version of my project can be found here](https://haunted-house0.herokuapp.com/)
 <img src="assets/images/responsive.JPG" alt="Play game button" style="max-width:100%;">
 
 How to play
@@ -12,6 +13,7 @@ How to play
 <p>The user is initally greeted by a start promt where they enter their name and then consent to playing</p>
 <p>From there the user is presented with an original story about a Haunted house where they are given the choice to follow whatever narrative they desire</p>
 <p>The user is in control of how the story plays out and in order to successfully escape the haunted house the user must make all the right decisions</p>
+<p>When making a choice the user will either be asked to enter Yes or No to some questions and A, B or C to other questions</p>
 
 Features
 ======
