@@ -1,3 +1,9 @@
+Haunted House
+======
+<p>Haunted House is a Python terminal game which runs in the Code institute mock terminal on Heroku</p>
+<p>Users can make multiple choices and 
+
+
 Features
 ======
 
